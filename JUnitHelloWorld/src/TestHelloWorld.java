@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class TestHelloWorld {
 
-	private HelloWorld h;
+	private HelloWorld helloworld;
 
 	@Before
 	public void setUp() throws Exception {
-		h = new HelloWorld();
+		helloworld = new HelloWorld();
 	}
 
 	@Test
 	public void testHelloEmpty() {
-		assertEquals(h.getName(), "");
-		assertEquals(h.getMessage(), "Hello!");
+		assertEquals(helloworld.getName(), "");
+		assertEquals(helloworld.getMessage(), "Hello!");
 	}
 
 	@Test
 	public void testHelloWorld() {
-		h.setName("World");
-		assertEquals(h.getName(), "World");
-		assertEquals(h.getMessage(), "Hello World!");
+		helloworld.setName("World");
+		assertEquals(helloworld.getName(), "World");
+		assertEquals(helloworld.getMessage(), "Hello World!");
 	}
 }
