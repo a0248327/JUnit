@@ -45,4 +45,8 @@
         <mapping class="com.codesolid.tutorials.model.entities.Actor"/>
 
     </session-factory>
+<<<<<<< HEAD
 </hibernate-configuration>
+=======
+</hibernate-configuration>
+>>>>>>> branch 'master' of https://github.com/a0248327/JUnit.git
