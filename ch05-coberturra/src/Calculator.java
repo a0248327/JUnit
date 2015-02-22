@@ -24,15 +24,12 @@
  * 
  * @version $Id$
  */
-public class Calculator
-{
-    public int squareRoot( int i )
-    {
-        return (int) Math.sqrt( i );
-    }
+public class Calculator {
+	public int squareRoot(int i) {
+		return (int) Math.sqrt(i);
+	}
 
-    public int sum( int a, int b )
-    {
-        return a + b;
-    }
+	public int sum(int a, int b) {
+		return a + b;
+	}
 }

@@ -59,4 +59,9 @@ public class HamcrestTest {
 	public void testWithHamcrest() {
 		assertThat(values, hasItem(anyOf(equalTo("one"), equalTo("two"), equalTo("three"))));
 	}
+	
+	@Test
+	public void testHamcrest() {
+		assertTrue(values.contains("x") && values.contains("y") && values.contains("z"));
+	}
 }
