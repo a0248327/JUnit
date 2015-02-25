@@ -58,6 +58,9 @@ public abstract class AbstractDbUnitTestCase {
 		}
 	}
 
+	/**
+	 * 第一进入口
+	 */
 	public static IDataSet getDataSet(String name) throws Exception {
 		InputStream inputStream = AbstractDbUnitTestCase.class.getResourceAsStream(name);
 		assertNotNull("file " + name + " not found in classpath", inputStream);
