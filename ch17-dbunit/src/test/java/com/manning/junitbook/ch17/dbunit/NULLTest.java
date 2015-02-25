@@ -35,7 +35,7 @@ public class NULLTest extends AbstractDbUnitTestCase {
 	@Test
 	public void testNULLIssue() throws Exception {
 		IDataSet okDataSet = getDataSet("/user-ok.xml");
-		DatabaseOperation.CLEAN_INSERT.execute(dbunitConnection, okDataSet);
+		DatabaseOperation.CLEAN_INSERT.execute(dbunitConnection, okDataSet); // 把 user-ok.xml 存入数据库
 		User user = dao.getUserById(2);
 		assertNull(user.getFirstName());
 		assertNull(user.getLastName());
@@ -47,13 +47,19 @@ public class NULLTest extends AbstractDbUnitTestCase {
 		Assertion.assertEquals(sortedDataSet, actualDataSet);
 	}
 
+	/**
+	 * 测试用户
+	 * 方法 assertNotNull(user.getUsername()); 是新加的。
+	 * @throws Exception
+	 */
 	@Test
 	public void testNULLReplacementDataset() throws Exception {
 		IDataSet okDataSet = getDataSet("/user-ok.xml");
-		DatabaseOperation.CLEAN_INSERT.execute(dbunitConnection, okDataSet);
+		DatabaseOperation.CLEAN_INSERT.execute(dbunitConnection, okDataSet); // 把 user-ok.xml 存入数据库
 		User user = dao.getUserById(2);
 		assertNull(user.getFirstName());
 		assertNull(user.getLastName());
+		assertNotNull(user.getUsername());
 		IDataSet actualDataSet = dbunitConnection.createDataSet();
 		Assertion.assertEquals(okDataSet, actualDataSet);
 		IDataSet revertedDataSet = getReplacedDataSet("/user-replacement.xml", -1);
