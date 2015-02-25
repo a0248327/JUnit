@@ -72,7 +72,8 @@ public class TestWebClient {
 	@Test
 	public void testGetContentOk() throws Exception {
 		String result = client.getContent(new URL("http://localhost:8080/testGetContentOk"));
-		assertEquals("It works", result);
+		assertEquals("Chosen1bin", result);
+		// assertEquals("It works", result);
 	}
 
 	@Test
@@ -101,7 +102,7 @@ public class TestWebClient {
 
 			OutputStream out = response.getOutputStream();
 			ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer();
-			writer.write("It works");
+			writer.write("Chosen1bin");
 			writer.flush();
 			response.setIntHeader(HttpHeaders.CONTENT_LENGTH, writer.size());
 			writer.writeTo(out);

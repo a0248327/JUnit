@@ -37,10 +37,10 @@ public class WebClient {
 		try {
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setDoInput(true);
-			InputStream is = connection.getInputStream();
+			InputStream is = connection.getInputStream(); // 在is里获得it works
 			byte[] buffer = new byte[2048];
 			int count;
-			while (-1 != (count = is.read(buffer))) {
+			while (-1 != (count = is.read(buffer))) { // 从输入流中读取一定数量的字节，并将其存储在缓冲区数组 buffer 中。
 				content.append(new String(buffer, 0, count));
 			}
 		} catch (IOException e) {
