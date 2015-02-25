@@ -29,6 +29,11 @@ import org.dbunit.operation.DatabaseOperation;
 import org.junit.Ignore;
 import org.junit.Test;
 
+/**
+ * 测试在Jdbc中是否能存入用户
+ * @author han
+ *
+ */
 public class UserDaoJdbcImplTest extends AbstractDbUnitTestCase {
 
 	/**
