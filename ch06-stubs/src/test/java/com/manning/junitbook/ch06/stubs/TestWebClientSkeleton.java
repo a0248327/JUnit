@@ -53,7 +53,6 @@ public class TestWebClientSkeleton {
 	public void testGetContentOk() throws Exception {
 		WebClient client = new WebClient();
 		String result = client.getContent(new URL("http://localhost:8080/testGetContentOk"));
-
 		assertEquals("It works", result);
 	}
 }
